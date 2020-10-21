@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?>
+
+<AnchorPane id="AnchorPane" prefHeight="478.0" prefWidth="396.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.AddAppointmentController">
+   <children>
+      <VBox alignment="CENTER" layoutX="6.0" layoutY="12.0" prefHeight="454.0" prefWidth="385.0">
+         <children>
+            <ComboBox fx:id="cbSelectPatient" onAction="#handleSelectPatient" prefHeight="48.0" prefWidth="385.0" promptText="Select Patient:" />
+            <TextField fx:id="txtAppointmentType" prefHeight="48.0" prefWidth="380.0" promptText="Appointment Type" />
+            <TextArea fx:id="txtAppointmentNotes" prefHeight="151.0" prefWidth="385.0" promptText="Notes:" />
+            <HBox prefHeight="48.0" prefWidth="385.0">
+               <children>
+                  <DatePicker fx:id="dpStartDate" onAction="#handleSetStartDate" prefHeight="48.0" prefWidth="185.0" promptText="Start Date" />
+                  <ComboBox fx:id="cbStartHour" onAction="#handleStartHourSelect" prefHeight="48.0" prefWidth="100.0" promptText="HR" visibleRowCount="12">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="09" />
+                            <String fx:value="10" />
+                            <String fx:value="11" />
+                            <String fx:value="12" />
+                            <String fx:value="13" />
+                            <String fx:value="14" />
+                            <String fx:value="15" />
+                            <String fx:value="16" />
+                            <String fx:value="17" />
+                            <String fx:value="18" />
+                            <String fx:value="19" />
+                            <String fx:value="20" />
+                        </FXCollections>
+                    </items>
+                     <padding>
+                        <Insets left="42.0" />
+                     </padding>
+                  </ComboBox> 
+                  <ComboBox fx:id="cbStartMinute" layoutX="138.0" layoutY="10.0" onAction="#handleStartMinuteSelect" prefHeight="48.0" prefWidth="100.0" promptText="MIN" visibleRowCount="4">
+                      <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="00" />
+                            <String fx:value="15" />
+                            <String fx:value="30" />
+                            <String fx:value="45" />
+                        </FXCollections>
+                    </items>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <Label fx:id="lblAlert" alignment="CENTER" prefHeight="24.0" prefWidth="385.0" textAlignment="CENTER" textFill="RED">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Label>
+            <Button fx:id="btnSave" mnemonicParsing="false" onAction="#handleSave" prefHeight="48.0" prefWidth="385.0" text="Save">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnExit" alignment="CENTER" mnemonicParsing="false" onAction="#handleExit" prefHeight="48.0" prefWidth="82.0" text="Exit">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

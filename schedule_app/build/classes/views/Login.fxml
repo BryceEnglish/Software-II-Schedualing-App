@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="404.0" prefWidth="486.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.LoginController">
+   <children>
+      <VBox layoutX="5.0" layoutY="14.0" prefHeight="337.0" prefWidth="477.0">
+         <children>
+            <TextField fx:id="txtId" prefHeight="48.0" prefWidth="477.0" promptText="ID">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="txtPassword" prefHeight="48.0" promptText="Password">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </PasswordField>
+            <PasswordField fx:id="txtPin" prefHeight="48.0" promptText="Pin">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </PasswordField>
+            <Label fx:id="lblAlert" alignment="CENTER" contentDisplay="CENTER" prefWidth="477.0" textAlignment="JUSTIFY" textFill="RED">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnLogin" mnemonicParsing="false" onAction="#handleLogin" prefHeight="48.0" prefWidth="477.0" text="Login">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Button>
+            <VBox prefHeight="49.0" prefWidth="477.0">
+               <children>
+                  <Label fx:id="lblUser" prefHeight="0.0" prefWidth="400.0" text="User Time:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblUserTime" prefHeight="25.0" prefWidth="400.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </VBox>
+            <VBox prefHeight="66.0" prefWidth="477.0">
+               <children>
+                  <Label fx:id="lblMain" prefHeight="0.0" prefWidth="200.0" text="Main Office Time:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblMainOfficeTime" prefHeight="0.0" prefWidth="200.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <Button fx:id="btnExit" layoutX="194.0" layoutY="351.0" mnemonicParsing="false" onAction="#handleExit" prefHeight="48.0" prefWidth="100.0" text="Exit">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

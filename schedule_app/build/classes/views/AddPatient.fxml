@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="478.0" prefWidth="396.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="views.AddPatientController">
+   <children>
+      <VBox alignment="CENTER" layoutX="6.0" layoutY="12.0" prefHeight="454.0" prefWidth="385.0">
+         <children>
+            <TextField fx:id="txtPatientName" prefHeight="48.0" prefWidth="370.0" promptText="Patient Name" />
+            <TextField fx:id="txtPatientAddress" prefHeight="48.0" prefWidth="370.0" promptText="Address Line 1" />
+            <TextField fx:id="txtPatientAddress2" prefHeight="48.0" prefWidth="370.0" promptText="Address Line 2 (NA if not applicable)" />
+            <TextField fx:id="txtPatientState" prefHeight="48.0" prefWidth="370.0" promptText="State" />
+            <TextField fx:id="txtPatientCity" prefHeight="48.0" prefWidth="370.0" promptText="City" />
+            <TextField fx:id="txtPatientPostalCode" prefHeight="48.0" prefWidth="370.0" promptText="Postal Code" />
+            <TextField fx:id="txtPatientPhone" layoutX="10.0" layoutY="154.0" prefHeight="48.0" prefWidth="370.0" promptText="Phone Number" />
+            <TextField fx:id="txtPatientINSPR" layoutX="10.0" layoutY="154.0" prefHeight="48.0" prefWidth="370.0" promptText="Insurance Provider" />
+            <Button fx:id="btnSave" mnemonicParsing="false" onAction="#handleSave" prefHeight="48.0" prefWidth="385.0" text="Save">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnExit" alignment="CENTER" mnemonicParsing="false" onAction="#handleExit" prefHeight="48.0" prefWidth="82.0" text="Exit">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
